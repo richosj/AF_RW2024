@@ -10,16 +10,13 @@ import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 import concat from 'gulp-concat';
 import fileInclude from 'gulp-file-include';
-import newer from 'gulp-newer';
+//import newer from 'gulp-newer';
 import babelify from 'babelify';
 import bro from 'gulp-bro';
 import minify from 'gulp-minify';
 import cssnano from 'cssnano';
 import cached from 'gulp-cached';
-import imagemin from "gulp-imagemin";
-import log from 'fancy-log';
-import sharp from 'sharp';
-import through2 from 'through2';
+
 
 const browserSyncInstance = browserSync.create();
 
@@ -115,13 +112,13 @@ const js = () => {
     '!' + path_src.js + '/vendor/**',
     '!' + path_src.js + '/main.js'
   ])
-  .pipe(newer(path_dist.js + '/all.js'))
   .pipe(plumber({ errorHandler: onErrorHandler }))
   .pipe(sourcemaps.init({ loadMaps: true }))
   .pipe(bro({
     transform: [
-      babelify.configure({ presets: ['@babel/preset-env'] }),
-      ['uglifyify', { global: true }]
+      babelify.configure({ presets: ['@babel/preset-env'] })
+      //,
+      //['uglifyify', { global: true }]
     ]
   }))
   .pipe(concat('all.js'))
@@ -154,40 +151,23 @@ const webserver = () => {
   });
 };
 
-
-const image = () => {
-  return gulp.src(`${path_src.images}/**/*`)
-    //.pipe(image())
+const copyImages = () => {
+  return gulp.src(path_src.images + "/**/*.{jpg,jpeg,png,gif,svg,png}")
+    .pipe(plumber({ errorHandler: onErrorHandler }))
     .pipe(gulp.dest(path_dist.images))
+    .on('end', () => log('Images copied successfully.'))
+    .on('error', (err) => log.error('Error copying images:', err));
 };
-
-// const processImages = () => {
-//   return gulp.src(path_src.images + "/**/*.{jpg,jpeg,png,gif,svg}")
-//     .pipe(through2.obj((file, _, cb) => {
-//       if (!file.isBuffer()) return cb(null, file);
-
-//       sharp(file.contents)
-//         .toBuffer()
-//         .then(data => {
-//           file.contents = data;
-//           cb(null, file);
-//         })
-//         .catch(err => cb(err));
-//     }))
-//     .pipe(gulp.dest(path_dist.images))
-//     .on('end', () => log('Images processed successfully.'))
-//     .on('error', (err) => log.error('Error processing images:', err));
-// };
 
 const watch = () => {
   gulp.watch([path_src.css + "/**/*.scss"], css);
   gulp.watch([path_src.js + "/**/*.js"], js);
   gulp.watch([path_src.html + "/**/*.html"], html);
-  gulp.watch([path_src.images + "/**/*"], image);
+  //gulp.watch([path_src.images + "/**/*"], copyImages);
 };
 
 const live = gulp.parallel(webserver, watch);
 
 export const cleans = gulp.series(clean);
-export const build = gulp.series(gulp.parallel(html, css, cssReset, js, fonts, image, vendors));
+export const build = gulp.series(gulp.parallel(html, css, cssReset, js, fonts , vendors));
 export const dev = gulp.series(build, live);
