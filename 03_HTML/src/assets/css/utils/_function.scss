@@ -16,8 +16,6 @@
         @content;
     }
 }
-
-
 @mixin sizes($width, $height) {
     $width-value: if(unitless($width), $width * 1px, $width);
     $height-value: if(unitless($height), $height * 1px, $height);
@@ -25,14 +23,12 @@
     width: calc(#{$width-value} / 2);
     height: calc(#{$height-value} / 2);
 }
-
 @mixin responsive-gap($breakpoint) {
     @if map-has-key($gap, $breakpoint) {
       padding-left: map-get($gap, $breakpoint);
       padding-right: map-get($gap, $breakpoint);
     }
 }
-
 @mixin set-background($image-url, $size: auto, $position: 0 0, $repeat: no-repeat) {
     background-size: $size;
     background-position: $position;
