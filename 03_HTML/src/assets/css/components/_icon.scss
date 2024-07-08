@@ -1,0 +1,32 @@
+@import '../utils/var';
+@import '../utils/function';
+
+@mixin icon($url, $width, $height) {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url($url);
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.icon{
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    &-del{
+        @include icon("../images/icon/icon-del.png" , 1.4rem,1.4rem);
+    }
+    &-close{
+        &._white{
+            @include icon("../images/icon/icon-close-white.png" , 1.4rem,1.4rem);
+        }
+    }
+    &-window{
+        &._white{
+            @include icon("../images/icon/icon-window-white.png" , 1.4rem,1.4rem);
+        }
+    }
+}

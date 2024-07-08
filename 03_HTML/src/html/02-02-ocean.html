@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "사업분야",
+            "title" : "해양"
+        })
+        @@include('./include/headerBanner.html')
+        @@include('./include/mobilenav.html')
+        <!-- s: contents -->
+        <div data-current="business" data-layout="sub" id="contents" class="ocean">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "안전하고 스마트한 <br>해양정보 서비스 산업을 선도합니다."
+            })
+
+            <div class="ocean__wrap">
+                <div class="container">
+                    <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">해양정보 서비스</div>
+                            <div class="business__hgroup--desc">해양공간정보의 쉽고 편리한 이용을 위해 안전, 수산, 레저·관광 등 해양 활동에 필요한 정보를<br>수집·제공하는 대국민 해양공간정보 포털 서비스를 제공하고 있습니다.</div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs _multi">
+                            <div class="figure">
+                                <img src="" data-src="ocean-01.png">
+                                <div class="caption">실시간 이안류 감시서비스</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="ocean-02.png">
+                                <div class="caption">바다봄 지식정보시스템</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="ocean-03.png">
+                                <div class="caption">개방海</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="ocean-04.png">
+                                <div class="caption">무인도서 정보조회</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+
+                    <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">해양공간 의사결정체계 지원</div>
+                            <div class="business__hgroup--desc">해양수산정보의 분석, 해양공간계획 업무지원, 무인도서 정보시스템 및 이안류 모니터링 시스템 등<br>해양공간정보를 수집하여 의사결정에 필요한 정보를 제공합니다.</div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs _multi">
+                            <div class="figure">
+                                <img src="" data-src="ocean-05.png">
+                                <div class="caption">해양수산빅데이터플랫폼</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="ocean-06.png">
+                                <div class="caption">해양디지털트윈 제작</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="ocean-07.png">
+                                <div class="caption">해수욕장 안전지수</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="ocean-08.png">
+                                <div class="caption">실시간 이안류 감시서비스</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+                </div>
+            </div>  
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+
+    @@include('./include/modal.html',{
+        'page__name' : '해양'
+    })
+</body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "사업분야",
+            "title" : "행정"
+        })
+        @@include('./include/headerBanner.html')
+        @@include('./include/mobilenav.html')
+        <!-- s: contents -->
+        <div data-current="business" data-layout="sub" id="contents" class="adminstra">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "수요자 중심의 서비스 실현으로 <br>신뢰 기반 첨단행정체계를 구축합니다."
+            })
+            <div class="adminstra__wrap">
+                <div class="container">
+                    <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">도로명주소 운영</div>
+                            <div class="business__hgroup--desc">
+                                연간 5억 명의 접속자수, 630만 건의 data 및 3.5만개 연계기관 등을 관리하는 국가주소정보시스템운영을 통해<br>
+                                자치단체 주소업무 지원과 도로명주소 안내서비스를 지난 7년간 365일 24시간 무중단으로 제공하고 있습니다.
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs">
+                            <div class="figure">
+                                <img src="" data-src="admin-01.png">
+                                <div class="caption">도로명주소 안내시스템 </div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="admin-02.png">
+                                <div class="caption">도로명주소 안내시스템 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+
+                    <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">디지털식품정보 플랫폼구축</div>
+                            <div class="business__hgroup--desc">
+                                식품 기업이 정보와 서비스를 손쉽게 활용할 수 있도록 One-Stop 체계를 지원하는 디지털식품정보플랫폼과 식품 전·후방 산업 연계에 필요한 <br>
+                                혁신서비스 제공으로 민간 비즈니스 창출을 지원하는 식품산업 비즈니스 혁신플랫폼(푸드이음)을 구축하여 식품산업의 디지털전환을 지원합니다.
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs">
+                            <div class="figure">
+                                <img src="" data-src="admin-01.png">
+                                <div class="caption">디지털 식품 정보 플랫폼</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="admin-02.png">
+                                <div class="caption">식품산업비즈니스 혁신 플랫폼</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+
+                    <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">금융정보 분석시스템 구축/운영</div>
+                            <div class="business__hgroup--desc">
+                                자금세탁과 테러자금 조달 방지 등 불법 금융거래 방지를 위해 5,000여 개 금융 회사와 전산망을<br>
+                                구성하여 연간 80만 건 이상 금융정보 분석 업무를 지원합니다.
+                            </div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs">
+                            <div class="figure">
+                                <img src="" data-src="admin-05.png">
+                                <div class="caption">FIU 정보시스템</div>
+                            </div>
+                            <div class="figure">
+                                <img src="" data-src="admin-06.png">
+                                <div class="caption">FIU 정보시스템</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+
+
+                </div>
+            </div>  
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+
+    @@include('./include/modal.html',{
+        'page__name' : '행정'
+    })
+</body></html>

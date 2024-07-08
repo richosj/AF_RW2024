@@ -1,0 +1,32 @@
+/*
+    table
+*/
+
+.table{
+    table{
+        width: 100%;
+    }
+    th,
+    td{
+        padding: 1rem;
+        border: 1px solid #ccc;
+        text-align: left;
+        vertical-align: middle;
+        &:first-child{
+            padding-left: 2rem;
+        }
+        &:last-child{
+            padding-right: 2rem;
+        }
+    }
+    thead{
+        th{
+            background-color: #eee;
+        }
+    }
+    tbody{
+        td{
+            background-color: #fff;
+        }
+    }
+}

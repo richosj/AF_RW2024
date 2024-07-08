@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "게시판",
+            "title" : "홍보영상"
+        })
+        @@include('./include/mobilenav.html')
+        @@include('./include/headerBanner.html')
+        <!-- s: contents -->
+        <div data-current="board" data-layout="sub" id="contents" class="promotion">
+
+            <div class="intro--banner">
+                <div class="intro--banner_point">
+                    <div class="intro--banner_title">
+                        <div class="container">
+                            <h2 class="page_title"></h2>
+                            <p class="sub_title_desc">올포랜드는 ICT와 공간정보를 <br>융합하여 고객에 꿈을 함께 실천합니다.</p>
+                        </div>
+                    </div>        
+                    <div class="intro--banner_bg"></div>
+                    <div class="promotion__visual">
+                        <div class="promotion__visual--player container">
+                            <div class="thumb"><img src="./assets/images/sample/board-player.png" alt=""></div>
+                            <div class="desc">
+                                <div class="titles">올포랜드 창립 19주년 기념영상</div>
+                                <div class="date">2024-03-28</div>
+                            </div>
+                            <button type="button" class="promotion__visual--player-button" id="promotionPlay"><i class="sr-only">재생</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board board--list container">
+                <div class="board--search">
+                    <form id="fn">
+                        <div class="board--search__wrap">
+                            <label for="keyword">검색어</label>
+                            <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력" id="keyword">
+                            <button type="button" class="btn--search" title="검색"><i></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <nav class="board--tabs tabs" role="tablist">
+                    <div role="presentation">
+                        <a href="#" role="tab" aria-selected="true"><span>전체</span><small>(16)</small></a>
+                    </div>
+                    <div role="presentation">
+                        <a href="#" role="tab" aria-selected="false"><span>디지털트윈</span><small>(16)</small></a>
+                    </div>
+                    <div role="presentation">
+                        <a href="#" role="tab" aria-selected="false"><span>교육자료</span><small>(16)</small></a>
+                    </div>
+                    <div role="presentation">
+                        <a href="#" role="tab" aria-selected="false"><span>홍보</span><small>(16)</small></a>
+                    </div>
+                </nav>
+                
+                <div class="board--gall">
+                    @@for (var i = 0; i < 6; i++) {
+                        <div class="board--gall__item">
+                            <a href="./05-02-adver-view.html">
+                                <div class="board--gall__thumb">
+                                    <img src="./assets/images/sample/thumb_video_450x254.png" alt="게시판 썸네일">
+                                </div>
+                                <div class="board--gall__info">
+                                    <div class="board--gall__title">DT-24. 올포랜드 춘천 의암호 디지털트윈(Uiam Lake, City of Chuncheon, Dig...</div>
+                                    <div class="board--gall__date">2024-02-23</div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+                <!-- e: board-gall -->
+
+                <!-- s: paging -->
+                @@include('./include/paging.html')
+                <!-- e: paging -->
+            </div>
+            <!-- e: board -->
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+
+    <script>
+        document.getElementById('promotionPlay').addEventListener('click', function() {
+            // iframe 요소 생성
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/ladsU5af7Ys?autoplay=1';
+            iframe.title = '올포랜드 창립 19주년 기념영상';
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+            iframe.allowFullscreen = true;
+
+            // iframe 로딩 완료 이벤트 핸들러
+            iframe.onload = function() {
+                console.log('로드 완료');
+            };
+
+            // iframe을 원하는 위치에 삽입
+            var container = document.querySelector('.promotion__visual--player');
+            container.innerHTML = ''; // 기존 내용을 지우고
+            container.appendChild(iframe); // iframe 삽입
+        });
+
+    </script>
+</body></html>

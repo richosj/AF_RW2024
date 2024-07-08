@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "게시판",
+            "title" : "보도자료"
+        })
+        @@include('./include/mobilenav.html')
+        @@include('./include/headerBanner.html')
+        <!-- s: contents -->
+        <div data-current="board" data-layout="sub" id="contents" class="press">
+
+            <div class="intro--banner">
+                <div class="intro--banner_point">
+                    <div class="intro--banner_title">
+                        <div class="container">
+                            <h2 class="page_title"></h2>
+                            <p class="sub_title_desc">올포랜드의 최신 소식 및 활동을<br>확인해보세요.</p>
+                        </div>
+                    </div>        
+                    <div class="intro--banner_bg">
+                        <div class="container">
+                        <div class="press__latest">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="./assets/images/sample/boardview_thumb.png" alt="">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="subject"><a href="#">KT·올포랜드 DX 융합 기술 활용 안전관리 솔루션 개발 협약 체결</a></div>
+                                <div class="desc"><a href="#">KT충남/충북광역본부가 1일 공간정보 솔루션 전문기업인 ㈜올포랜드 (대표 김병기)와 함께 DX융합 기술을 활용한 안전관리솔루션 개발 등을 위한</a></div>
+                                <div class="date">2024-03-28</div>
+                                <div class="link">
+                                    <a href="./05-01-press.html"><span>자세히 보기</span><i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="back--img"><img src="./assets/images/sample/boardview_thumb.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board board--list container">
+                <div class="board--search">
+                    <form id="fn">
+                        <div class="board--search__wrap">
+                            <label for="keyword">검색어</label>
+                            <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력" id="keyword">
+                            <button type="button" class="btn--search" title="검색"><i></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="board--total">총 게시글 <b>16</b>건</div>
+                <div class="board--gall">
+                    @@for (var i = 0; i < 6; i++) {
+                        <div class="board--gall__item">
+                            <a href="./05-01-press-view.html">
+                                <div class="board--gall__thumb">
+                                    <img src="./assets/images/sample/thumb_450x254.png" alt="게시판 썸네일">
+                                </div>
+                                <div class="board--gall__info">
+                                    <div class="board--gall__title">공간정보 그룹‘올포랜드’, 초실감 디지털트윈 키워드 제시한다</div>
+                                    <div class="board--gall__desc">고(古)문서 인식 솔루션·인공지능 CCTV 등 솔루션 공개 얼라이언스로 ‘기업 간 공간정보 협력 플랫폼’ 완성</div>
+                                    <div class="board--gall__date">2024-02-23</div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+                <!-- e: board-gall -->
+
+                <!-- s: paging -->
+                @@include('./include/paging.html')
+                <!-- e: paging -->
+            </div>
+            <!-- e: board -->
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+</body></html>

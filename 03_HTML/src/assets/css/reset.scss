@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@import 'utils/var';
+@import 'utils/function';
+
+:root {
+    --font-name: "Pretendard";
+    --font-size: 1.6rem;
+    --font-weight: 400;
+    --font-color: #000000;
+    --line-height: 24px;
+    --max-width: 1660px;
+    --sm: 576px;
+    --md: 768px;
+    --lg: 1000px;
+    --xl: 1440px;
+    --xxl: 1660px;
+    --gap: 1.5rem;
+    --gap-md: 1.5rem;
+    --gap-sm: 1.5rem;
+    --gutter: max(7.8vw, 13rem);
+    --header: 10rem;
+    --lg-header : 5rem;
+}
+
+ *{
+     box-sizing: border-box;
+ }
+ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ fieldset,img {
+     border: 0 none
+ }
+ 
+ dl,ul,ol,menu,li {
+     list-style: none
+ }
+ 
+ blockquote,q {
+     quotes: none
+ }
+ 
+ blockquote:before,blockquote:after,q:before,q:after {
+     content: "";
+     content: none
+ }
+ 
+ input,select,textarea,button {
+     vertical-align: middle
+ }
+ 
+ input::-ms-clear {
+     display: none
+ }
+ 
+ button {
+     border: 0 none;
+     background-color: transparent;
+     cursor: pointer
+ }
+ body,th,td,input,select,textarea,button {
+     color: #333;
+     font-family: 'Pretendard';
+ }
+ a {
+     color: #333;
+     text-decoration: none;
+     cursor: pointer
+ }
+ a:active,a:hover {
+     text-decoration: none
+ }
+ a:active {
+     background-color: transparent
+ }
+ 
+ address,caption,cite,code,dfn,em,var {
+     font-style: normal;
+     font-weight: 400
+ }
+ html {
+     font-size: 10px
+ }
+ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{
+    font-size: var(--font-size);
+ }

@@ -1,0 +1,214 @@
+@import '../utils/var';
+@import '../utils/function';
+// 모바일
+body{-webkit-font-smoothing: antialiased;}
+
+#mobileAside{
+    position: relative;
+    z-index: 1000;
+}
+
+.header._sub{
+    .mobile-button span{
+        background-color: #000;
+    }
+}
+
+.header{
+    @include responsive(xl){
+        height: auto;
+        .container-xxl{
+            padding-left: 1.7rem;
+            padding-right: 1.7rem;
+        }
+        &--wrap{
+            height: 50px;
+        }
+        .brand{
+            @include sizes(156,42);
+            background-size: auto 100%;
+            transition: background 0.25s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
+        }
+        nav{
+            display: none;
+        }
+        .util{
+            .special-links{
+                visibility: hidden;
+                display: none;
+            }
+            .lang{
+                opacity: 0;
+                visibility: hidden;
+                a{
+                    span{
+                        color: #000;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                    i{
+                        background: url("../images/common/mobile-utils-lang.png") no-repeat 0 0;
+                        @include sizes(33,33);
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+        .mobile-button{
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:has(#btnMobile.active){
+            .header{
+                .brand{
+                    transition: background 0.25s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+                    background-image: url("../images/common/logo-blue.png");
+                }
+                .util{
+                    .lang{
+                        opacity: 1;
+                        visibility: visible;
+                        transition: opacity 0.25s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
+.mobile-button{
+    opacity: 0;
+    visibility: hidden;
+    width: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    span{
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        &:nth-child(2){
+            margin: 5px 0;
+        }
+    }
+    &.active{
+        span{
+            background-color: #333;
+        }
+        span:nth-child(1){
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        span:nth-child(2){
+            opacity: 0;
+        }
+        span:nth-child(3){
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
+}
+
+.mobile-gnb{
+    &-wrapper{
+        visibility: hidden;
+        padding-top: 50px;
+        opacity: 1;
+        overflow: hidden;
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        width: 0vw;
+        transition: transform 800ms cubic-bezier(0.77, 0, 0.175, 1), width 800ms cubic-bezier(0.77, 0, 0.175, 1), visibility 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    }
+}
+
+body:has(.header._sub){
+    .mobile-gnb{
+        &-wrapper{
+            padding-top: 0;
+            top: 5rem;
+        }
+    }
+}
+
+
+.mobile-menu{
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 1.25rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    height: 100%;
+    .gnb--li1{
+        a{
+            white-space: nowrap;
+        }
+        > a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 1.8rem;
+            &::after{
+                content:"";
+                display: block;
+                width: 12px;
+                height: 6px;
+                background: url("../images/common/mobile-gnb-arrow.png");
+                background-size: auto 100%;
+                transform: rotate(180deg);
+                transition: all 0.15s;
+                opacity: 0.6;
+            }
+        }
+        &.active{
+            > a{
+                &::after{
+                    transform: rotate(0deg);
+                    opacity: 1;
+                }
+            }
+            .depth{
+                max-height: 500px;
+                padding: 1.25rem 3rem;
+                opacity: 1;
+            }
+        }
+        .depth{
+            border-radius: 1.5rem;
+            background-color: #f6f6f6;
+            padding: 0 3rem;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            will-change: auto;
+            transition: max-height 0.5s ease-out, padding 0.3s ease-out, opacity 0.4s ease-in;
+            li{
+                line-height: 1;
+                a{
+                    display: block;
+                    padding: 1.25rem 0;
+                    font-size: 1.4rem;
+                    &:focus{
+                        color: #127ab7;
+                    }
+                }
+            }
+        }
+    }
+}
+body:has(#btnMobile.active){
+    .mobile-gnb-wrapper{
+        width: 100vw;
+        visibility: visible;
+    }
+}

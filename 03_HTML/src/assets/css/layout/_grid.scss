@@ -1,0 +1,22 @@
+@import '../utils/var';
+@import '../utils/function';
+
+
+.container{
+    margin: 0 auto;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+    max-width: var(--xl);
+    &.relative{
+        position: relative;
+    }
+}
+
+.gutter-xxl{
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    @include responsive(xxl){
+        padding-left: var(--gap-sm);
+        padding-right: var(--gap-sm);
+    }
+}

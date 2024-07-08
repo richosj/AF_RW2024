@@ -1,0 +1,51 @@
+{
+  "name": "n",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev --gulpfile gulpfile.babel.js",
+    "build": "gulp build --gulpfile gulpfile.babel.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gulp-cli": "^3.0.0",
+    "sharp": "^0.33.4",
+    "through2": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/register": "^7.23.7",
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "^10.4.19",
+    "babelify": "^10.0.0",
+    "bootstrap": "^5.3.3",
+    "browser-sync": "^3.0.2",
+    "cssnano": "^7.0.2",
+    "dart-sass": "^1.25.0",
+    "del": "^6.0.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^5.0.0",
+    "gulp-bro": "^2.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-dependents": "^1.2.5",
+    "gulp-file-include": "^2.3.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-image": "^6.3.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.77.5",
+    "tailwindcss": "^3.4.3",
+    "uglifyify": "^5.0.2"
+  }
+}

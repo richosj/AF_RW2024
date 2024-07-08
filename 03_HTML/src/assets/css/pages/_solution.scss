@@ -1,0 +1,13 @@
+@import '../utils/var';
+@import '../utils/function';
+
+$img: '../images/solution';
+$sections: solution;
+@each $section in $sections {
+    .#{$section} {
+        .intro--banner_bg {
+            background-image: url('#{$img}/bg-#{$section}.png');
+            height: 70rem;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "사업분야",
+            "title" : "국토"
+        })
+        @@include('./include/headerBanner.html')
+        @@include('./include/mobilenav.html')
+        <!-- s: contents -->
+        <div data-current="business" data-layout="sub" id="contents" class="soil">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "가치를 창출하는 정보 생산과 <br>혁신을 공유하는 서비스 제공합니다.1"
+            })
+
+            <div class="soil__wrap">
+                <div class="container">
+                    <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">국가공간정보통합체계</div>
+                            <div class="business__hgroup--desc">클라우드 기반의 국가공간정보 데이터 서비스 및 공동활용 통합플랫폼 구축 운영을 통해<br>공간정보산업을 선도할 국가공간정 융·복합 활용 허브(Hub)를 구축 운영합니다.</div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs">
+                            <div class="figure bd_0">
+                                <img src="" data-src="kukto-01.png">
+                            </div>
+                            <div class="figure bd_0">
+                                <img src="" data-src="kukto-02.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+                     <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">국토이용정보체계</div>
+                            <div class="business__hgroup--desc">클라우드 기반의 국가공간정보 데이터 서비스 및 공동활용 통합플랫폼 구축 운영을 통해<br>공간정보산업을 선도할 국가공간정 융·복합 활용 허브(Hub)를 구축 운영합니다.</div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs">
+                            <div class="figure bd_0">
+                                <img src="" data-src="kukto-03.png">
+                            </div>
+                            <div class="figure bd_0">
+                                <img src="" data-src="kukto-04.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+                     <!-- s: business__row -->
+                    <div class="business__row">
+                        <header class="business__hgroup">
+                            <div class="business__hgroup--title">부동산 종합정보</div>
+                            <div class="business__hgroup--desc">전국 개별공시지가 및 개별 주택가격을 산정하고 부동산 공시가격 정보 활용체계를<br>구축하는 클라우드를 기반의 부동산공시가격 산정시스템을 구축 운영합니다.</div>
+                            <div class="business__hgroup--button">
+                                <button type="button" data-trigger="modal" data-target=""><span>고객사 / 사업</span><i class="icon icon-window _white"></i></button>
+                            </div>
+                        </header>
+                        <div class="business__imgs">
+                            <div class="figure bd_0">
+                                <img src="" data-src="kukto-05.png">
+                            </div>
+                            <div class="figure bd_0">
+                                <img src="" data-src="kukto-06.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: business__row -->
+                </div>
+            </div>  
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+
+    @@include('./include/modal.html',{
+        'page__name' : '국토'
+    })
+</body></html>

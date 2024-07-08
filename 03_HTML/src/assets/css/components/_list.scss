@@ -1,0 +1,50 @@
+
+@import '../utils/var';
+@import '../utils/function';
+
+.list{
+    &__square{
+        > li{
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1.7rem;
+            +li{
+                margin-top: 1.5rem;
+            }
+            &::before{
+                display: block;
+                content:"";
+                width: 4px;
+                height: 4px;
+                background-color: #000;
+                position: absolute;
+                left: 0;
+                top: 1rem;
+            }
+        }
+    }
+    &__circle{
+        > li{
+            position: relative;
+            padding-left: 1.2rem;
+            font-size: 2.1rem;
+            color: #555;
+            text-align: left;
+            line-height: 1;
+            +li{
+                margin-top: 1.5rem;
+            }
+            &::before{
+                display: block;
+                content:"";
+                width: 4px;
+                height: 4px;
+                background-color: #555;
+                position: absolute;
+                border-radius: 50%;
+                left: 0;
+                top: 1rem;
+            }
+        }
+    }
+}

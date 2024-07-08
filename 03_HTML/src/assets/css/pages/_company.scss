@@ -1,0 +1,208 @@
+@import '../utils/var';
+@import '../utils/function';
+
+$img: '../images/company';
+
+$sections: ceo, history;
+@each $section in $sections {
+    .#{$section} {
+        .intro--banner_bg {
+            background-image: url('#{$img}/bg-#{$section}.png');
+        }
+    }
+}
+
+.ceo{
+    &__narrative{
+        &--text1{
+            color: #1d1d1d;
+            font-weight: 700;
+            line-height: 1.5;
+            font-size: 2.5rem;
+            b{
+                color: #0a529d;
+            }
+        }
+        &--text2{
+            color: #1d1d1d;            
+            line-height: 1.5;
+            font-size: 1.7rem;
+            margin-top: 3.5rem;
+        }
+    }
+    &__goals{
+        margin-top: 3.5rem;
+        background-color: #f0f0f0;
+        .container{
+            position: relative;
+            padding: 3.5rem 0;
+        }
+        &--text1{
+            color: #1d1d1d;
+            font-weight: 700;
+            line-height: 1.5;
+            font-size: 2.5rem;
+            b{
+                color: #0a529d;
+            }
+        }
+        &--text2{
+            color: #1d1d1d;            
+            line-height: 1;
+            font-size: 1.7rem;
+            margin-top: 3.5rem;
+            p{
+                +p{
+                    margin-top: 3.5rem;
+                }
+            }
+        }
+        &--name{
+            font-weight: 700;
+            color: #1d1d1d;
+            margin-top: 8rem;
+            font-size: 2.5rem;
+            b{
+                color: #0a529d;
+            }
+        }
+        &--titleImg{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+.history{
+    &__tabs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        padding:0 var(--gap);
+        max-width: calc(90rem + var(--gap));
+        width: 100%;
+        margin-bottom: 8rem;
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1d1d1d;
+            background-color: #f1f1f1;
+            font-size: 1.7rem;
+            height: 7rem;
+            &:nth-child(1){
+                border-radius: 1rem 0 0 1rem;
+            }
+            &:nth-child(3){
+                border-radius: 0 1rem 1rem 0;
+            }
+            &._selected{
+                background-color: #0a529d;
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+    }
+    &__content{
+        margin: 0 auto;
+        position: relative;
+        padding: 0 var(--gap);
+        max-width: calc(var(--xl) + var(--gap));
+        .progress{
+            &-bar{
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: .5rem;
+                transform: translateX(-50%);
+                background-color: #f0f0f0;
+            }
+            &-indicator{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background-color: #0a529d;
+            }
+            &-step{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                width: 7.3rem;
+                height: 7.3rem;
+                @include set-background("#{$img}/history-head.png");
+            }
+        }
+        &--rows{
+            display: flex;
+            flex-wrap: wrap;
+            gap : 0 16.4rem;
+            &:not(.last-child){
+                margin-bottom: 12rem;
+            }
+            > div {
+                width: calc(50% - 8.2rem);
+            }
+            &._revers{
+                flex-direction: row-reverse;
+                ol > li{
+                    flex-direction: row-reverse;
+                    ul{
+                        li{
+                            text-align: right;
+                            padding-right: .9rem;
+                            padding-left: 0;
+                            &::before{
+                                left: inherit;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--title{
+            height: 22rem;
+            border: 1px solid #f3f4f4;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            background-color: #f1f1f2;
+            padding: 4rem;
+            text-align: right;
+            h2{font-size: 4.8rem;}
+            p{font-size: 2.1rem;}
+        }
+        &--list{
+            ol{
+                > li{
+                    display: flex;
+                    flex-direction: row;
+                    gap : 0 4.5rem;
+                    > strong{
+                        color: #1d1d1d;
+                        font-size: 2.5rem;
+                    }
+                    +li{
+                        margin-top: 5rem;
+                    }
+                    ul{
+                        padding-top: .7rem;
+                        li{
+                            color: #1d1d1d;
+                            font-size: 1.7rem;
+                            padding-left: .9rem;
+                            &::before{
+                                top: .7rem;
+                                width: .2rem;
+                                height: .2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

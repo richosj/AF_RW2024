@@ -1,0 +1,81 @@
+
+.form-radio{
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    gap: 0 1rem;
+    input{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0.1;
+    }
+    i{
+        display: inline-block;
+        position: relative;
+        border-radius: 50%;
+        width: 2.4rem;height: 2.4rem;
+        border: 1px solid #ddd;
+        background: #fff;
+        overflow: hidden;
+        transition: all 0.25s;
+        &::after{
+            content:"";
+            width: 0;
+            height: 0;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            transition: all 0.25s;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+    }
+    span{
+        color: #555555;
+        font-size: 1.9rem;
+    }
+    input:checked + i{
+        background-color: #0a529d;
+        border-color: #0a529d;
+        &::after{
+            width: .8rem;
+            height: .8rem;
+        }
+    }
+    input[type="checkbox"]{
+        + i{
+            border-radius: 0;
+        }
+        &:checked + i{
+            &::after{
+                border-radius: 0;
+            }
+        }
+    }
+    span span{
+        color: #007ab4;
+        font-size: 1.9rem;
+    }
+}
+
+.form-input{
+    display: inline-block;
+    border-radius: 1rem;
+    border: 1px solid #8e8e8e;
+    padding: 0 2rem;
+    height: 6rem;
+    width: 100%;
+}
+
+.form-textarea{
+    display: inline-block;
+    border-radius: 1rem;
+    border: 1px solid #8e8e8e;
+    padding: 2rem;
+    overflow-y: auto;
+    width: 100%;
+}

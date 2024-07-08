@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "회사소개",
+            "title" : "비전 및 이념"
+        })
+        @@include('./include/mobilenav.html')
+        @@include('./include/headerBanner.html')
+        <!-- s: contents -->
+        <div data-current="company" data-layout="sub" id="contents" class="">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "가치를 창출하는 정보 생산과 <br>혁신을 공유하는 서비스 제공합니다."
+            })
+            <div class="kukto">
+
+            </div>
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+</body></html>

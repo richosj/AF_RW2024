@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "회사소개",
+            "title" : "대표 인사말"
+        })
+        @@include('./include/mobilenav.html')
+        @@include('./include/headerBanner.html')
+        <!-- s: contents -->
+        <div data-current="company" data-layout="sub" id="contents" class="ceo">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "창조적인 마인드와 지속적인 기술개발을 바탕으로<br>다양한 분야의 공공서비스 능률 향상에 앞장서 왔습니다."
+            })
+            <div class="ceo__wrap">
+                <div class="ceo__narrative">
+                    <div class="container">
+                        <div class="ceo__narrative--text1">
+                            <b>올포랜드</b>는 2004년 창사 이래 해양과 육지를 포함하는 전 국토에 대한 <br>
+                            GIS DB 생산 기술과 핵심 솔루션 개발, 융·복합기술 개발 등에 매진한 결과<br> 
+                            현재 괄목할 만한 성과를 거두고 있습니다.
+                        </div>
+                        <div class="ceo__narrative--text2">
+                            이를 바탕으로 다양한 분야의 공공 서비스 능률 향상에 기여하고 있으며 해상과 육상을 아우르는 <br>
+                            DB 구축과 서비스 제공 등의 영역에서 폭발적인 시너지를 창출, 비즈니스를 수행하는 <br>
+                            종합 공간정보 서비스 기업으로 거듭나고 있습니다.
+                        </div>
+                        <div class="ceo__narrative--text2">
+                            특히 전통적인 GIS 시장에 머무르는 것이 아니라 빠르게 융·복합되어 가는 SI 시장의 흐름에 발 맞춰 <br>
+                            빅데이터 처리, 클라우드 서비스, 스마트 기술, 3D 등 최신 기술 개발에 박차를 가하고 있으며 또한 <br>
+                            해양, 토지, 지적, 건축 및 재난, 재해 등 다양한 공공 분야의 행정 업무 효율 향상과 서비스 품질 제고를 위한 <br>
+                            역량강화에도 매진하고 있습니다. 
+                        </div>
+                        <div class="ceo__narrative--text2">
+                            그밖에 대형 SI 사업의 사업관리 및 품질관리 기술 배양에도 투자를 확대하고 있습니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="ceo__goals">
+                    <div class="container">
+                        <div class="ceo__goals--text1">
+                            <b>올포랜드</b>는 공간정보 생산부터 서비스 제공까지의 전 과정을 하나로 연결하는<br>
+                            “공간정보서비스 Alliance”를 통해 기업 간 협력 플랫폼을 완성하고,<br>
+                            지속적인 기술개발을 통해 다양한 분야의 공공서비스 및 SI 사업 분야의 발전에 <br>
+                            이바지할 것입니다.
+                        </div>
+
+                        <div class="ceo__goals--text2">
+                            <p>이를 위해 고객 여러분들의 꾸준한 관심을 부탁드리며 고객을 위한 가치창출에 항상 최고의 노력을 다하겠습니다.</p>
+                            <p>감사합니다.</p>
+                        </div>
+
+                        <div class="ceo__goals--name">
+                            <b>올포랜드</b> 대표이사 김병기
+                        </div>
+
+                        <div class="ceo__goals--titleImg">
+                            <div class="ceo__titleImg--object"><img src="../assets/images/company/ceo-img.png" alt="대표이사 김병기"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+</body></html>

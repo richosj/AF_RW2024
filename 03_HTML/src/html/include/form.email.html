@@ -1,0 +1,18 @@
+<div class="container mx-auto">
+    <form onsubmit="validateForm(this); return false;">
+        <div class="form-email">
+            <input type="text" class="form-control" name="firstEmail" title="이메일 입력">
+            <span>@</span>
+            <input type="text" class="form-control" name="secondEmail" title="도메인 입력">
+            <select class="domain-list" onchange="dirDomain(this);">
+                <option value="직접입력">직접입력</option>
+                <option value="naver.com">naver.com</option>
+                <option value="google.com">google.com</option>
+                <option value="hanmail.net">hanmail.net</option>
+                <option value="nate.com">nate.com</option>
+                <option value="kakao.com">kakao.com</option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>

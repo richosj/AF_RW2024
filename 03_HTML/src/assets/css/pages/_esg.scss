@@ -1,0 +1,522 @@
+
+$img: '../images/esg';
+
+.esg{
+    .intro--banner_bg{background-image: url('#{$img}/bg-esg.png');}
+    &__slogan{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 2rem;
+        overflow: hidden;
+        padding: 8rem 0;
+        background: linear-gradient(to right, #358c9e 0%, #358c9e, #6ba76e 100%);
+        p{
+            font-weight: 700;
+            line-height: 1.6;
+            color: #fff;
+            font-size: 4rem;
+        }
+    }
+
+    &__important{
+        padding: 16rem 0;
+        &--group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &:nth-child(2){
+                flex-direction: row-reverse;
+                margin: 14rem 0;
+            }
+        }
+        .desc{
+            width: 32%;
+            padding-left: 8rem;
+            .txt{
+                color: #666666;
+                line-height: 1.6;
+                font-size: 2.1rem;
+            }
+        }
+        .hgroup{
+            position: relative;
+            padding: 4rem 0 3rem;
+            span{
+                position: absolute;
+                font-weight: 900;
+                color: #f3f3f3;
+                top: 0;
+                left: 0;
+                transform: translateX(-50%);
+                line-height: 0.75;
+                font-size: 24rem;
+                z-index: 1;
+            }
+            p{
+                position: relative;
+                z-index: 2;
+                line-height: 1;
+            }
+            .large{
+                color: #127ab7;
+                font-weight: 900;
+                font-size: 5rem;
+            }
+            .eng{
+                font-weight: 900;
+                color: #127ab7;
+                font-size: 1.9rem;
+                padding: 1.5rem 0 0.3rem 0;
+                text-transform: uppercase;
+            }
+            .kr{
+                color: #000000;
+                font-weight: 700;
+                font-size: 1.9rem;
+                margin-top: .5rem;
+            }
+        }
+
+        .banners{
+            width: calc(100% - 32%);
+        }
+    }
+
+    &__sign{
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 13rem 0;
+        background-color: #000;
+        &--txt{
+            text-align: center;
+            span{
+                color: #c6c6c6;
+                font-size: 2.1rem;
+            }
+            strong{
+                color: #fff;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+// 환경 경영
+[data-current="esg"] .scroll__wrap{
+    position: relative
+}
+.scroll__background{
+    > .container{
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .text__pin{
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding-top: 23rem;
+        &--title{
+            color: #fff;
+            line-height: 1;
+            font-weight: 700;
+            font-size: 4.8rem;
+            
+        }
+        &--shabby{
+            color: #fff;
+            line-height: 1.7;
+            font-size: 2.1rem;
+            margin: 5rem 0;
+        }
+        &--sign{
+            display: flex;
+            align-items: center;
+            gap: 0 2rem;
+            margin-top: 4rem;
+            .txt{
+                color: #fff;
+                p{
+                    &:nth-child(1){font-size: 2.1rem;}
+                    &:nth-child(2){font-size: 2.5rem;margin-top: 1rem;}
+                }
+            }
+
+        }
+    }
+}
+
+.cards__wrap{
+    position: relative;
+    padding-top: 18rem;
+}
+
+.cards__figure{
+    position: absolute;
+    overflow: hidden;
+    width: 37.3rem;
+    height: 46.7rem;
+    background-color: #fff;
+    background-image:  url('#{$img}/bg-card.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    border-radius: 2rem;
+    padding: 4rem 3.5rem;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    &--title{
+        font-size: 1.7rem;
+    }
+    &--desc{
+        line-height: 1.7;
+        color: #666;
+        font-size: 1.9rem;
+        margin-top: 2rem;
+    }
+}
+
+.cards__figure--01{
+    right: 50rem;
+    top: calc(16rem + 18rem);
+}
+.cards__figure--02{
+    right: 4rem;
+    top: calc(16rem + 19rem + 18rem);
+}
+
+.cards__figure--03{
+    right: 50rem;
+    top: calc(75rem + 18rem);
+}
+
+.cards__figure--04{
+    right: 4rem;
+    top: calc(100rem + 18rem);
+}
+
+.progress__bar{
+    height: 2px;
+    width: 33rem;
+    background-color: rgba(255,255,255,0.2);
+    position: relative;
+    &--gage{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #fff;
+        width: 10%;
+    }
+}
+
+.envir{
+    padding-bottom: 0;
+    .intro--banner_bg{background-image: url('#{$img}/bg-envir.png');}
+    
+    .scroll__background{
+        background: linear-gradient(to bottom, #7eb376 0%, #74af79, #6aaa7c 100%);
+    }
+    .cards__figure{
+        &--title{
+            color: #88b53f;
+        }
+    }
+}
+
+.human{
+    padding-bottom: 0;
+    .intro--banner_bg{background-image: url('#{$img}/bg-human.png');}
+    &__wrap{
+        position: relative;
+    }
+    .scroll__background{
+        background: linear-gradient(to top, #2d8c9e 0%, #2688a3, #1d84a8 100%);
+    }
+    .cards__figure{
+        &--title{
+            color: #007ab4;
+        }
+    }
+}
+
+
+.health{
+    padding-bottom: 0;
+    .intro--banner_bg{background-image: url('#{$img}/bg-health.png');}
+    &__wrap{
+        position: relative;
+    }
+    .scroll__background{
+        background: linear-gradient(to top, #7c8185 0%, #6c737a, #646c75 100%);
+    }
+    .cards__figure{
+        &--title{
+            color: #000001;
+        }
+    }
+}
+
+.ethics{
+    padding-bottom: 0;
+    .intro--banner_bg{background-image: url('#{$img}/bg-ethics.png');}
+    &__wrap{
+        position: relative;
+    }
+    .scroll__background{
+        background: linear-gradient(to top, #4275ad 0%, #386eaa, #2f67a7 100%);
+    }
+    .cards__figure{
+        &--title{
+            color: #0a529d;
+        }
+    }
+}
+
+.community{
+    .intro--banner_bg{background-image: url('#{$img}/bg-commu.png');}
+    &__wrap{
+        position: relative;
+    }
+    &__title{
+        text-align: center;
+        padding-bottom: 5rem;
+        h3{
+            font-weight: 700;
+            line-height: 1;
+            font-size: 4rem;
+        }
+        p{
+            color: #555555;
+            font-size: 2.1rem;
+            margin-top: 3rem;
+            b{
+                font-weight: 400;
+                color: #007ab4;
+            }
+        }
+    }
+    &__row{
+        padding: 7.55rem 0;
+        border-top: 1px solid #c6c6c6;
+        .wrap{
+            &.flex{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+                gap: 0 19rem;
+            }
+        }
+    }
+    &__frm{
+
+        &--title{
+            padding-bottom: 3.5rem;
+            span{
+                display: inline-block;
+                color: #2d2d2d;
+                font-weight: 700;
+                font-size: 2.5rem;
+                &.required{
+                    position: relative;
+                    &::after{
+                        content:"*";
+                        display: inline-block;
+                        font-weight: 400;
+                        color: #007ab4;
+                        font-size: 0.76em;
+                        margin-left: 0.3rem;
+                    }
+                }
+            }
+            p{
+                color: #717171;
+                font-size: 1.5rem;
+                line-height: 1.6;
+                margin-top: 3.5rem;
+            }
+        }
+        &--type{
+            display: flex;
+            gap: 0 4rem;
+        }
+        &--label{
+            margin-bottom: 1rem;
+            label{
+                display: inline-block;
+                color: #2d2d2d;
+                font-size: 1.9rem;
+                &.required{
+                    position: relative;
+                    &::after{
+                        content:"*";
+                        display: inline-block;;
+                        color: #007ab4;
+                        font-size: 1em;
+                        margin-left: 0.3rem;
+                    }
+                }
+            }
+        }
+        &--desc{
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: #717171;
+        }
+        &--group{
+            +.community__frm--group{
+                margin-top: 3.5rem;
+            }
+            .form-textarea{
+                height: 29rem;
+            }
+        }
+    }
+    &__end{
+        display: flex;
+        justify-content: flex-end;
+        gap: 0 1.5rem;
+        button{
+            color: #fff;
+            font-size: 1.9rem;
+            height: 6rem;
+            width: 12rem;
+            border-radius: 1rem;
+            &:nth-child(1){
+                background-color: #000;
+            }
+            &:nth-child(2){
+                background-color: #0a529d;
+            }
+        }
+    }
+}
+
+/*
+    별도
+*/
+.fn_files{}
+#drop-area{
+    border: 1px dashed #8e8e8e;
+    background-color: #f0f0f0;
+    padding: 6rem 0;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    .wrap{
+        text-align: center;
+        p{
+            color: #2d2d2d;
+            font-size: 1.9rem;
+            margin-bottom: 2rem;
+        }
+        .button{
+             color: #fff;
+             background-color: #000;
+             border-radius: 3rem;
+             display: inline-flex;
+             align-items: center;
+             gap: 0 .7rem;
+             font-size: 1.9rem;
+             height: 6rem;
+             padding: 0 3.5rem;
+             i{
+                display: inline-block;
+                width: 13px;height: 14px;
+                @include set-background('../images/esg/icon-filedrop.png');
+             }
+        }
+    }
+}
+
+#file-list{
+    margin-top: 3rem;
+}
+.files{
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 3rem;
+        border-radius: 1rem;
+        border: 1px solid #c6c6c6;
+        + *{
+            margin-top: 1rem;
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        gap: 0 0.5rem;
+    }
+    &__del{
+        color: #555555;
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+        gap: 0 .9rem;
+
+    }
+}
+.fn_files_total{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    span{font-size: 1.9rem;color: #2d2d2d;}
+    .count{
+        display: flex;
+        align-items: center;
+        gap: 0 .4rem;
+        .state-count{color: #0a529d;font-weight: 700;}
+    }
+    .btn_files_del{
+        color: #555555;
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+        gap: 0 .9rem;
+    }
+}
+
+.areement{
+    &__content{
+        border: 1px solid #c6c6c6;
+        border-radius: 1rem;
+        padding: 2rem;
+        ._first{
+            line-height: 1.6;
+            color: #555555;
+            font-size: 1.9rem;
+            padding-bottom: 2.5rem;
+        }
+        ol{
+            li{
+                strong{
+                    color: #2d2d2d;
+                    font-size: 1.7rem;
+                }
+                p{
+                    color: #555555;
+                    font-size: 1.7rem;
+                    margin-top: 1.5rem;
+                }
+                +li{
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+    &__input{
+        border-radius: 1rem;
+        background-color: #e5f1f7;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+        margin-top: 2.5rem;
+        label{
+            
+        }
+    }
+}

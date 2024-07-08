@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/meta.html', {
+    "page_main": false
+    })
+</head>
+
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+        "page_main": false,
+        "page_title": "ESG",
+        "title" : "소통채널"
+        })
+        @@include('./include/mobilenav.html')
+        @@include('./include/headerBanner.html')
+        <!-- s: contents -->
+        <div data-current="esg" data-layout="sub" id="contents" class="community">
+            @@include('./include/intro.html',{
+            "sub_title_desc" : "이해관계자와의 상생 및 신뢰 관계 유지 <br>및 발전을 위한 소통 채널을 운영합니다."
+            })
+
+            <div class="community__wrap">
+                <form>
+                    <div class="container">
+                        <div class="community__title">
+                            <h3>제보 내용</h3>
+                            <p>‘ <b>*</b> ’ 표시는 필수 입력 사항입니다.</p>
+                        </div>
+
+                        <div class="community__row">
+                            <div class="wrap">
+                                <div class="community__frm--title">
+                                    <span class="required">제보 유형</span>
+                                </div>
+
+                                <div class="community__frm--type">
+                                    <label class="form-radio">
+                                        <input type="radio" name="report-type">
+                                        <i></i>
+                                        <span>부정부패 · 비윤리적 이슈 신고 채널</span>
+                                    </label>
+
+                                    <label class="form-radio">
+                                        <input type="radio" name="report-type">
+                                        <i></i>
+                                        <span>고충처리 / 직장 내 괴롭힘 / 성희롱 신고 채널</span>
+                                    </label>
+
+                                    <label class="form-radio">
+                                        <input type="radio" name="report-type">
+                                        <i></i>
+                                        <span>안전 보건에 대한 개선 제안/건의</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="community__row">
+                            <div class="wrap flex">
+                                <div class="community__frm--col">
+                                    <div class="community__frm--title">
+                                        <span>제보자 정보</span>
+                                    </div>
+
+                                    <div class="community__frm--group">
+                                        <div class="community__frm--label"><label for="commuName"
+                                                class="required">이름</label></div>
+                                        <div class="community__frm--input">
+                                            <input type="text" class="form-input" title="이름 입력" placeholder="이순신"
+                                                id="commuName">
+                                        </div>
+                                    </div>
+
+                                    <div class="community__frm--group">
+                                        <div class="community__frm--label"><label for="commuName" class="required">회신 방법
+                                                선택</label></div>
+                                        <div class="community__frm--desc">연락처를 입력하지 않는 경우 이메일로 회신 예정</div>
+                                        <div class="community__frm--input">
+                                            <label class="form-radio">
+                                                <input type="radio" name="returnContact">
+                                                <i></i>
+                                                <span>이메일</span>
+                                            </label>
+                                            <label class="form-radio">
+                                                <input type="radio" name="returnContact">
+                                                <i></i>
+                                                <span>연락처</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="community__frm--group">
+                                        <div class="community__frm--label"><label for="commueMail" class="required">이메일
+                                            </label></div>
+                                        <div class="community__frm--input">
+                                            <input type="text" class="form-input" title="이메일  입력"
+                                                placeholder="이메일을 입력해 주세요" id="commueMail">
+                                        </div>
+                                    </div>
+
+                                    <div class="community__frm--group">
+                                        <div class="community__frm--label"><label for="commuTel">연락처</label></div>
+                                        <div class="community__frm--input">
+                                            <input type="text" class="form-input" title="연락처 입력"
+                                                placeholder="숫자만 입력해주세요." id="commuTel">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="community__frm--col">
+                                    <div class="community__frm--title">
+                                        <span>제보 내용</span>
+                                    </div>
+                                    <div class="community__frm--group">
+                                        <div class="community__frm--label"><label for="commuSubject"
+                                                class="required">제목</label></div>
+                                        <div class="community__frm--input">
+                                            <input type="text" class="form-input" title="제목 입력"
+                                                placeholder="제목을 입력해주세요." id="commuSubject">
+                                        </div>
+                                    </div>
+
+                                    <div class="community__frm--group">
+                                        <div class="community__frm--label"><label for="commuContent"
+                                                class="required">내용 </label></div>
+                                        <div class="community__frm--desc">제보내용이 한글 2,000자 이상인 경우 첨부파일로 제보바랍니다.</div>
+                                        <div class="community__frm--input">
+                                            <textarea name="" id="commuContent" class="form-textarea" title="내용 입력" placeholder="내용을 입력해 주세요"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="community__row">
+                            <div class="wrap">
+                                <div class="community__frm--title">
+                                    <span>파일업로드</span>
+                                    <p>
+                                        첨부파일은 최대 3개까지 등록할 수 있습니다.<br>
+                                        첨부파일 용량은 최대 9MB 입니다.
+                                    </p>
+                                </div>
+
+                                <div class="fn_files">
+                                    <div id="drop-area">
+                                        <div class="wrap">
+                                            <p>첨부할 파일을 여기에 끌어다 놓거나. 파일 선택 버튼을 눌러 직접 선택해주세요. </p>
+                                            <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                                            <label class="button" for="fileElem"><span>파일 업로드</span><i></i></label>    
+                                        </div>
+                                    </div>
+                                    <div class="fn_files_total">
+                                        <div class="count">
+                                            <span class="state-count">2개</span><span>/</span><span class="max-count">3개</span>
+                                        </div>
+                                        <div class="utils">
+                                            <button type="button" class="btn_files_del"><i class="icon icon-del"></i>전체파일 삭제</button>
+                                        </div>
+                                    </div>
+                                    <div id="file-list"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="community__row">
+                            <div class="wrap">
+                                <div class="community__frm--title">
+                                    <span>개인정보 보호를 위한 이용자 동의사항</span>
+                                </div>
+
+                                <div class="areement__content">
+                                    <p class="_first">
+                                        ㈜올포랜드는 귀하가 제공하는 개인정보가 「개인정보 보호법」 등 관련 법령에 따라 개인정보보호 규정을 준수하여 수집·보유·처리되고 있습니다. <br>
+                                        제보하기 서비스 이용을 위하여 아래의 내용을 정확히 숙지하시고 동의여부를 결정하여 주시기 바랍니다.
+                                    </p>
+
+                                    <ol>
+                                        <li>
+                                            <strong>1. 개인정보의 수집 및 이용 목적</strong>
+                                            <p>제보에 대한 답변 전달</p>
+                                        </li>
+                                        <li>
+                                            <strong>2. 수집하는 개인정보 항목</strong>
+                                            <p>- 필수 사항 : 이름, 이메일</p>
+                                            <p>- 선택 사항 : 연락처</p>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                                <div class="areement__input">
+                                    <div>
+                                        <label class="form-radio"><input type="checkbox"><i></i><span>위 내용에 동의합니다.<span>*</span></span></label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="community__end">
+                            <button type="button" class="community__frm-reset">초기화</button>
+                            <button type="button" class="community__frm-submit">제출</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+    <script>
+        let dropArea = document.getElementById('drop-area');
+        let fileList = document.getElementById('file-list');
+        let uploadedFiles = [];
+        // Prevent default drag behaviors
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false)
+            document.body.addEventListener(eventName, preventDefaults, false)
+        });
+
+        // Highlight drop area when item is dragged over it
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false)
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false)
+        });
+
+        // Handle dropped files
+        dropArea.addEventListener('drop', handleDrop, false);
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function highlight(e) {
+            dropArea.style.borderColor = 'black';
+        }
+
+        function unhighlight(e) {
+            dropArea.style.borderColor = '#ccc';
+        }
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            ([...files]).forEach(file => {
+                uploadedFiles.push(file);
+                addFileToList(file);
+            });
+        }
+
+        function addFileToList(file) {
+            let fileItem = document.createElement('div');
+            fileItem.className = 'files__item';
+            fileItem.innerHTML = `
+                <span class="files__info"><i class="material-symbols-outlined">text_snippet</i><span>${file.name} [${file.type}, ${Math.round(file.size / 1024)}KB]</span></span>
+                <button type="button" class="files__del" onclick="removeFile('${file.name}')"><i class="icon icon-del"></i>삭제</button>
+            `;
+            fileList.appendChild(fileItem);
+        }
+
+        function removeFile(fileName) {
+            uploadedFiles = uploadedFiles.filter(file => file.name !== fileName);
+            updateFileList();
+        }
+
+        function updateFileList() {
+            fileList.innerHTML = '';
+            uploadedFiles.forEach(file => addFileToList(file));
+        }
+
+        function uploadFile(file) {
+            let url = 'YOUR_UPLOAD_URL';
+            let formData = new FormData();
+            formData.append('file', file);
+
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+            .then(() => { /* Done. Inform the user */ })
+            .catch(() => { /* Error. Inform the user */ })
+        }
+    </script>
+</body>
+
+</html>

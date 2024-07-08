@@ -1,0 +1,100 @@
+@import '../utils/var';
+@import '../utils/function';
+
+
+[data-layout="sub"]{
+    padding-top: 23rem;
+    padding-bottom: 23rem;
+    display: block;
+    @include responsive(lg){
+        padding-top: 15rem;
+        padding-bottom: 13rem;
+    }
+    &:has(.board--view){
+        padding-top: 16rem;
+        .intro--banner{
+            display: none;
+        }
+    }
+}
+body{
+    &:has(.header.hide){
+        .intro--banner{
+            &_title{
+                margin-top: 6rem;
+            }
+        }
+    }
+   &:has(.header.up){
+        .intro--banner{
+            &_title{
+                margin-top: 1.6rem;
+            }
+        }
+    }
+}
+.intro--banner{
+    position: relative;
+    margin-bottom: 15rem;
+    &_point{
+        //margin-top: 15rem;
+        padding-top: 24rem;
+        @include responsive(lg){
+            padding-top: 12rem;
+        }
+    }
+    &_title{
+        position: absolute;
+        //transition: all 0.25s;
+        transition: margin 0.25s;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        height: 24rem;
+        h2,p{
+            transition: color 0.25s;
+        }
+        h2{
+            font-weight: 400;
+            color: #127ab7;
+            font-size: 2.4rem;
+            padding-bottom: 3rem;
+        }
+        p{
+            color: #000;
+            font-weight: 700;
+            font-size: 4.8rem;
+        }
+    }
+    &-wrap{
+        position: relative;
+        width: 100%;
+    }
+    &_bg{
+        position: relative;
+        height: 50rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: #f8f8f8;
+        margin: 0 auto 0;
+        max-width: var(--xl);
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        &.__business{
+            background-image: url("../images/business/bg.png");
+        }
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            left: 0;top: 0;
+            width: 100%;height: 100%;
+            background: #000;
+            opacity: 0.25;
+        }
+        @include responsive2(xxl) {
+            min-width: map-get($container-max-widths,xl);
+        }
+    }   
+}

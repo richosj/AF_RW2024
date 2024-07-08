@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/meta.html', {
+        "page_main": false
+    })
+</head>
+<body>
+    @@include('./include/skip.html')
+    <!-- 전체 -->
+    <div id="all4land" class="wrap all4land">
+        @@include('./include/header.html', {
+            "page_main": false,
+            "page_title": "솔루션",
+            "title" : "Mapprime 솔루션"
+        })
+        @@include('./include/headerBanner.html')
+        @@include('./include/mobilenav.html')
+        <!-- s: contents -->
+        <div data-current="business" data-layout="sub" id="contents" class="solution">
+            @@include('./include/intro.html',{
+                "sub_title_desc" : "데이터 생산부터 서비스 전 단계를 아우르는 솔루션<br>MapPrime은 디지털트윈, AI 시대에서 최고의 선택입니다."
+            })
+            <div class="solution__wrap">
+                
+            </div>
+        </div>
+        <!-- e: contents -->
+    </div>
+    @@include('./include/footer.html')
+</body></html>
